@@ -2,10 +2,7 @@ const { gql } = require('apollo-server');
 
 module.exports = gql`
 	scalar DataTime
-	type Book {
-		title: String
-		author: String
-	}
+	
 	type Employee {
 		_id: ID!
 		firstname: String!
@@ -36,7 +33,6 @@ module.exports = gql`
 	}
 
 	type Query {
-		books: [Book]
 		allEmployees: [Employee]
 		singleEmployee(employeeId: ID): Employee!
 	}
